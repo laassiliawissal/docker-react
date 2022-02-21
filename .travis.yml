@@ -3,6 +3,6 @@ services:
   - docker
 
 before_install:
-  - docker build -t wissallaassilia/docker-react -f Dockerfile.dev
+  - docker build -t wissallaassilia/docker-react -f Dockerfile.dev .
 script: # -- --coverage to exit the test
   - docker run wissallaassilia/docker-react npm run test -- --coverage
